@@ -1,0 +1,30 @@
+.album-item-container {
+    padding: 8px 10px 8px 20px;
+    border-bottom: 1px solid lightgray;
+    background-color: #F9F7F6;
+}
+
+.thumbnail {
+    float: left;
+}
+
+.album-description-wrapper {
+    float: left;
+    margin-left: 10px;
+}
+
+.album-title {
+    color: blue;
+    font-weight: bold;
+}
+.files-count,
+.past-tense {
+    font-size: 12px;
+    color: dimgray;
+}
+.arrow {
+    float: right;
+    padding-top: 18px;
+    color: blue;
+}
+

@@ -1,0 +1,26 @@
+.tabs-wrapper {
+    margin-top: 8px;
+    position: relative;
+    z-index: 999;
+}
+
+.tab-inner {
+    display: flex;
+    margin-left: 5px;
+    float: left;
+    border: 1px solid lightgray;
+    height: 30px;
+    width: 50px;
+    border-radius: 5px 5px 0 0;
+    color: lightskyblue;
+    cursor: pointer;
+}
+
+i {
+    margin: auto;
+}
+
+.active {
+    color: blue;
+    border-bottom-color: white;
+}

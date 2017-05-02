@@ -1,0 +1,23 @@
+div.wrapper {
+    background-color: black;
+    padding: 5px;
+}
+
+form {
+    float: right;
+    position: relative;
+    background-color: #323334;
+    padding: 5px;
+    border-radius: 14px;
+}
+
+input {
+    outline: none;
+    border: none;
+    color: white;
+    background-color: transparent;
+}
+
+i {
+    color: white;
+}
