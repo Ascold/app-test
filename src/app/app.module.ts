@@ -34,8 +34,9 @@ import { SignupButtonComponent } from './signup-button/signup-button.component';
         FormsModule,
         HttpModule,
         RouterModule.forRoot([
-            {path: '', component: AppComponent},
-            {path: 'login', component: SignupComponent}
+            {path: '', component: AlbumItemComponent},
+            {path: 'login', component: SignupComponent},
+            {path: 'album', component: PhotoListItemComponent}
         ])
     ],
     providers: [],

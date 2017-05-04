@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
     selector: 'app-signup',
@@ -7,9 +8,12 @@ import {Component, OnInit} from '@angular/core';
 })
 export class SignupComponent implements OnInit {
 
-    constructor() { }
+    constructor(private route: ActivatedRoute) { }
 
     ngOnInit() {
+        let token = this.route.snapshot.params['access_token'];
+        console.log(this.route.snapshot);
+        console.log(this.route.snapshot.fragment.split('=')[1]);
     }
 
 }
