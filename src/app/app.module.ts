@@ -1,20 +1,22 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 import {FormsModule} from '@angular/forms';
-import {HttpModule} from '@angular/http';
+import {HttpModule, JsonpModule} from '@angular/http';
 
 import {RouterModule} from '@angular/router';
 
 import {AppComponent} from './app.component';
-import {HeaderComponent} from './header/header.component';
-import {TabsComponent} from './tabs/tabs.component';
-import {MetaInfoComponent} from './meta-info/meta-info.component';
-import {AlbumItemComponent} from './album-item/album-item.component';
-import {PhotoListItemComponent} from './photo-list-item/photo-list-item.component';
-import {TooltipComponent} from './tooltip/tooltip.component';
-import {PhotoSingleComponent} from './photo-single/photo-single.component';
-import { SignupComponent } from './signup/signup.component';
-import { SignupButtonComponent } from './signup-button/signup-button.component';
+import {HeaderComponent} from './components/header/header.component';
+import {TabsComponent} from './components/tabs/tabs.component';
+import {MetaInfoComponent} from './components/meta-info/meta-info.component';
+import {AlbumItemComponent} from './components/album-item/album-item.component';
+import {PhotoListItemComponent} from './components/photo-list-item/photo-list-item.component';
+import {TooltipComponent} from './components/tooltip/tooltip.component';
+import {PhotoSingleComponent} from './components/photo-single/photo-single.component';
+import {LoginComponent} from './components/login/login.component';
+import {ApiService} from './services/api.service';
+import { ContentWrapperComponent } from './components/content-wrapper/content-wrapper.component';
+
 
 @NgModule({
     declarations: [
@@ -26,20 +28,22 @@ import { SignupButtonComponent } from './signup-button/signup-button.component';
         PhotoListItemComponent,
         TooltipComponent,
         PhotoSingleComponent,
-        SignupComponent,
-        SignupButtonComponent,
+        LoginComponent,
+        ContentWrapperComponent,
+
     ],
     imports: [
         BrowserModule,
         FormsModule,
         HttpModule,
+        JsonpModule,
         RouterModule.forRoot([
-            {path: '', component: AlbumItemComponent},
-            {path: 'login', component: SignupComponent},
+            {path: '', component: ContentWrapperComponent},
+            {path: 'login', component: LoginComponent},
             {path: 'album', component: PhotoListItemComponent}
         ])
     ],
-    providers: [],
+    providers: [ApiService],
     bootstrap: [AppComponent]
 })
 export class AppModule {

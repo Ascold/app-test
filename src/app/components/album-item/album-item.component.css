@@ -6,6 +6,11 @@
 
 .thumbnail {
     float: left;
+    width: 80px;
+}
+
+.thumbnail img {
+    width: 100%;
 }
 
 .album-description-wrapper {
@@ -17,14 +22,16 @@
     color: blue;
     font-weight: bold;
 }
+
 .files-count,
 .past-tense {
     font-size: 12px;
     color: dimgray;
 }
+
 .arrow {
     float: right;
-    padding-top: 18px;
+    padding-top: 25px;
     color: blue;
 }
 
