@@ -16,6 +16,8 @@ import {PhotoSingleComponent} from './components/photo-single/photo-single.compo
 import {LoginComponent} from './components/login/login.component';
 import {ApiService} from './services/api.service';
 import { ContentWrapperComponent } from './components/content-wrapper/content-wrapper.component';
+import {StoreModule} from '@ngrx/store';
+import {StoreDevtoolsModule} from '@ngrx/store-devtools';
 
 
 @NgModule({
@@ -41,7 +43,11 @@ import { ContentWrapperComponent } from './components/content-wrapper/content-wr
             {path: '', component: ContentWrapperComponent},
             {path: 'login', component: LoginComponent},
             {path: 'album', component: PhotoListItemComponent}
-        ])
+        ]),
+        StoreModule.provideStore({
+            //place for future reducers
+        }),
+        StoreDevtoolsModule.instrumentOnlyWithExtension()
     ],
     providers: [ApiService],
     bootstrap: [AppComponent]
