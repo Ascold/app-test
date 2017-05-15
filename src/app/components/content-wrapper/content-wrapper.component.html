@@ -1,5 +1,5 @@
-<div *ngIf="token_status;else unset">
-    <app-album-item></app-album-item>
+<div *ngIf="currentUser;else unset">
+    <app-albums></app-albums>
 </div>
 <ng-template #unset>
     <div class="authorization">
@@ -11,4 +11,3 @@
         </div>
     </div>
 </ng-template>
-

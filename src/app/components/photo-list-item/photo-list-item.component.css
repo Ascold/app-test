@@ -1,3 +1,7 @@
+.photos-wrapper {
+    padding: 10px;
+}
+
 .photo-list-item {
     max-width: 90px;
 }

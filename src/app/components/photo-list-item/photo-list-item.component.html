@@ -1,11 +1,16 @@
-<div class="photo-list-item">
-    <div class="thumbnail-container">
-        <img src="../../../assets/images/test.jpg">
-    </div>
-    <div class="select-wrap clearfix">
-        <div>
-            <i class="fa fa-check" aria-hidden="true"></i>
+<div class="albums-wrapper">
+    <div class="description">Welcome,</div>
+    <div class="photos-wrapper">
+        <div *ngIf="currentAlbum" class="photo-list-item">
+            <div class="thumbnail-container">
+                <img src="../../../assets/images/test.jpg">
+            </div>
+            <div class="select-wrap clearfix">
+                <div>
+                    <i class="fa fa-check" aria-hidden="true"></i>
+                </div>
+                <div class="select">Select</div>
+            </div>
         </div>
-        <div class="select">Select</div>
     </div>
 </div>

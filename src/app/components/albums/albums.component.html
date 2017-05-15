@@ -1,0 +1,18 @@
+<div class="albums-wrapper">
+    <div class="description">Welcome, {{currentUser.full_name}}</div>
+    <div *ngFor="let album of albums" class="album-item-container clearfix">
+        <div class="thumbnail">
+            <img src="{{album.albumThumbnailUrl}}">
+        </div>
+        <div class="album-description-wrapper">
+            <div class="album-title">{{album.albumTitle}}</div>
+            <div class="files-count">{{album.albumPhotosCount}} files</div>
+            <div class="past-tense">{{album.albumCreatedAt | date:'yyyy-MM-dd HH:mm:ss'}}</div>
+        </div>
+        <div class="arrow">
+            <a routerLink="/albums/{{album.albumTitle}}">
+                <i class="fa fa-angle-double-right fa-2x" aria-hidden="true"></i>
+            </a>
+        </div>
+    </div>
+</div>
