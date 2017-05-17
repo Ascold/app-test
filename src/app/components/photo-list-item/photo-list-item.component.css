@@ -26,7 +26,7 @@ img {
     color: blue;
 }
 
-.select-wrap>div {
+.select-wrap > div {
     float: left;
     margin-left: 3px;
 }
@@ -36,3 +36,15 @@ img {
     cursor: pointer;
 }
 
+.description > div {
+    float: left;
+    margin-right: 10px;
+}
+
+.description > div:first-child {
+    cursor: pointer;
+}
+
+.description > div:first-child > i {
+    line-height: 18px;
+}

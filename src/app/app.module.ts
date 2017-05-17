@@ -8,7 +8,6 @@ import {RouterModule} from '@angular/router';
 import {AppComponent} from './app.component';
 import {HeaderComponent} from './components/header/header.component';
 import {TabsComponent} from './components/tabs/tabs.component';
-import {MetaInfoComponent} from './components/meta-info/meta-info.component';
 import {AlbumsComponent} from './components/albums/albums.component';
 import {PhotoListItemComponent} from './components/photo-list-item/photo-list-item.component';
 import {TooltipComponent} from './components/tooltip/tooltip.component';
@@ -28,7 +27,6 @@ import {AppStore} from "./app.store";
         AppComponent,
         HeaderComponent,
         TabsComponent,
-        MetaInfoComponent,
         AlbumsComponent,
         PhotoListItemComponent,
         TooltipComponent,
@@ -45,7 +43,8 @@ import {AppStore} from "./app.store";
         RouterModule.forRoot([
             {path: '', component: ContentWrapperComponent},
             {path: 'login', component: LoginComponent},
-            {path: 'albums/:name', component: PhotoListItemComponent}
+            {path: 'albums/:name', component: PhotoListItemComponent},
+            {path: 'photo', component: PhotoSingleComponent}
         ]),
         StoreModule.provideStore({
             albums,

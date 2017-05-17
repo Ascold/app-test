@@ -4,7 +4,6 @@ import {ApiService} from '../../services/api.service';
 import {AppStore} from "../../app.store";
 import {Store} from "@ngrx/store";
 import {User} from "../../models/user";
-import {Photo} from "../../models/photo.list";
 
 @Component({
     selector: 'app-albums',
@@ -29,8 +28,6 @@ export class AlbumsComponent implements OnInit {
             response => {
                 response.data.forEach((albumData) => this.albums.push(new Album(albumData)));
                 this.store.dispatch({type: 'ADD_ALBUM', payload: this.albums});
-                // console.log(this.albums);
-                // console.log('------------------------');
             },
             error => {
                 alert(error);
