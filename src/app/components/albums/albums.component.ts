@@ -27,14 +27,10 @@ export class AlbumsComponent implements OnInit {
 
         this.apiService.getData().subscribe(
             response => {
-                response.data.forEach(
-                    (albumData) => this.albums.push(new Album(albumData))
-                );
-                // response.data.carousel_media.forEach(photoData => this.albums.Album.push(new Photo(photoData)));
-               this.store.dispatch({type: 'ADD_ALBUM', payload: this.albums});
-
-                console.log(this.albums);
-                console.log('------------------------');
+                response.data.forEach((albumData) => this.albums.push(new Album(albumData)));
+                this.store.dispatch({type: 'ADD_ALBUM', payload: this.albums});
+                // console.log(this.albums);
+                // console.log('------------------------');
             },
             error => {
                 alert(error);

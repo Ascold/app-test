@@ -12,7 +12,7 @@ export class Album {
         this.albumThumbnailUrl = data.images.thumbnail.url;
         this.albumPhotosCount = data.carousel_media.length;
         this.albumCreatedAt = data.created_time * 1000;
-        // this.albumPhotos = data.carousel_media.forEach(photoData => this.albumPhotos.push(new Photo(photoData)));
+        data.carousel_media.forEach(photoData => this.albumPhotos.push(new Photo(photoData)));
     }
 
 }

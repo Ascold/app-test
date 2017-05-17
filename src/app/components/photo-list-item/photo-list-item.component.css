@@ -1,14 +1,15 @@
 .photos-wrapper {
-    padding: 10px;
+    padding: 5px;
 }
 
 .photo-list-item {
-    max-width: 90px;
+    float: left;
+    padding: 5px;
 }
 
 .thumbnail-container {
-    height: 90px;
-    border-radius: 0 0 5px 5px;
+    max-height: 110px;
+    max-width: 110px;
 }
 
 img {

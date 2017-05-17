@@ -1,9 +1,12 @@
 <div class="albums-wrapper">
-    <div class="description">Welcome,</div>
+    <i class="fa fa-folder lg-fx" aria-hidden="true"></i>
+    <div class="description">
+        <p>{{currentAlbum.albumTitle}}</p>
+    </div>
     <div class="photos-wrapper">
-        <div *ngIf="currentAlbum" class="photo-list-item">
+        <div *ngFor="let photo of currentAlbum.albumPhotos" class="photo-list-item clearfix">
             <div class="thumbnail-container">
-                <img src="../../../assets/images/test.jpg">
+                <img src="{{photo.thumbnail}}">
             </div>
             <div class="select-wrap clearfix">
                 <div>
