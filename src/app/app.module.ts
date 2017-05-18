@@ -44,7 +44,7 @@ import {AppStore} from "./app.store";
             {path: '', component: ContentWrapperComponent},
             {path: 'login', component: LoginComponent},
             {path: 'albums/:name', component: PhotoListItemComponent},
-            {path: 'photo', component: PhotoSingleComponent}
+            {path: 'photo/:id', component: PhotoSingleComponent}
         ]),
         StoreModule.provideStore({
             albums,

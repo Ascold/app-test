@@ -24,3 +24,16 @@
 .single-photo-description>div>div:last-child {
     width: 80%;
 }
+
+.description > div {
+    float: left;
+    margin-right: 10px;
+}
+
+.description > div:first-child {
+    cursor: pointer;
+}
+
+.description > div:first-child > i {
+    line-height: 18px;
+}

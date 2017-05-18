@@ -1,9 +1,9 @@
 import {Component, OnInit} from '@angular/core';
 import {Album} from '../../models/album.list';
 import {ApiService} from '../../services/api.service';
-import {AppStore} from "../../app.store";
-import {Store} from "@ngrx/store";
-import {User} from "../../models/user";
+import {AppStore} from '../../app.store';
+import {Store} from '@ngrx/store';
+import {User} from '../../models/user';
 
 @Component({
     selector: 'app-albums',
