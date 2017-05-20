@@ -21,6 +21,7 @@
 .album-title {
     color: blue;
     font-weight: bold;
+    text-decoration: none;
 }
 
 .files-count,

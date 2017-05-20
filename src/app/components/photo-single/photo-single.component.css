@@ -5,6 +5,7 @@
 .single-photo-img img {
     margin: 0 auto;
     display: block;
+    width: 100%;
 }
 
 .single-photo-description {

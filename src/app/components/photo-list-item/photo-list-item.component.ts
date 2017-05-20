@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
 import {Store} from '@ngrx/store';
+
 import {Album} from '../../models/album.list';
 import {AppStore} from '../../app.store';
 
@@ -13,7 +14,7 @@ export class PhotoListItemComponent implements OnInit {
     private currentAlbum;
     private album;
     public backToAlbums() {
-        this.router.navigate(['/']);
+        this.router.navigate(['../']);
     }
 
     constructor(private route: ActivatedRoute,

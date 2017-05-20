@@ -5,7 +5,7 @@
             <img src="{{album.albumThumbnailUrl}}">
         </div>
         <div class="album-description-wrapper">
-            <div class="album-title">{{album.albumTitle}}</div>
+            <a routerLink="/albums/{{album.albumTitle}}" class="album-title">{{album.albumTitle}}</a>
             <div class="files-count">{{album.albumPhotosCount}} files</div>
             <div class="past-tense">{{album.albumCreatedAt | date:'yyyy-MM-dd HH:mm:ss'}}</div>
         </div>

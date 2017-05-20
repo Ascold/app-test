@@ -1,8 +1,10 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
 import {Store} from '@ngrx/store';
+
 import {AppStore} from '../../app.store';
 import {Album} from '../../models/album.list';
+import {User} from "../../models/user";
 
 @Component({
     selector: 'app-photo-single',
@@ -12,9 +14,14 @@ import {Album} from '../../models/album.list';
 
 export class PhotoSingleComponent implements OnInit {
 
-    private currentImage;
+    private currentPhoto;
+    private currentAlbum;
     private album;
-    public toSinglePhoto() {};
+    public currentUser: User;
+
+    public backToAlbum() {
+        this.router.navigate(['../']);
+    };
 
     constructor(private route: ActivatedRoute,
                 private store: Store<AppStore>,
@@ -22,19 +29,25 @@ export class PhotoSingleComponent implements OnInit {
     }
 
     ngOnInit() {
-        // // let token = this.route.snapshot.fragment.split('=')[1];
-        // let currentPhoto = this.route.snapshot.params['id'];
-        // this.store.select('albums').subscribe(
-        //     (album: Album) => {
-        //         this.album = album;
-        //         this.currentImage = this.album.find(Album => {
-        //             return Album.images.standard_resolution.url == currentPhoto
-        //         });
-        //         console.log('this.currentImage');
-        //         console.log(this.currentImage);
-        //     }
-        // );
-        // this.toSinglePhoto()
+        let currentAlbumName = this.route.snapshot.params['name'];
+        let currentPhotoName = this.route.snapshot.params['id'];
+        this.store.select('albums').subscribe(
+            (album: Album) => {
+                this.album = album;
+                this.currentAlbum = this.album.find(Album => {
+                    return Album.albumTitle == currentAlbumName
+                });
+            }
+        );
+        this.currentPhoto = this.currentAlbum.albumPhotos.find(temp => {
+            return temp.standard_resolution.match(RegExp(currentPhotoName))
+        });
+        this.store.select('user').subscribe(
+            (user: User) => {
+                this.currentUser = user;
+            }
+        );
+
     }
 
 }

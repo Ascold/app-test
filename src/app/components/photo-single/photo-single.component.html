@@ -1,24 +1,24 @@
 <div class="albums-wrapper">
     <div class="description clearfix">
-        <div (click)="backToAlbums()">
+        <div (click)="backToAlbum()">
             <i class="fa fa-angle-left fa-2x" aria-hidden="true"></i>
         </div>
         <div>
-            <p>photo.jpg</p>
+            <p>{{this.route.snapshot.params['id']}}</p>
         </div>
     </div>
     <div class="single-photo-container">
         <div class="single-photo-img">
-            <img src="../../../assets/images/111.png">
+            <img src="{{currentPhoto.standard_resolution}}">
         </div>
         <div class="single-photo-description">
             <div class="clearfix">
-                <div class="">File name</div>
-                <div>mila.jpg</div>
+                <div>File name</div>
+                <div>{{this.route.snapshot.params['id']}}</div>
             </div>
             <div class="clearfix">
                 <div>Object name</div>
-                <div>Mila Kunis</div>
+                <div>{{currentUser.full_name}}</div>
             </div>
             <div class="clearfix">
                 <div>Caption</div>
