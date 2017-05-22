@@ -18,6 +18,7 @@ export class PhotoSingleComponent implements OnInit {
     private currentAlbum;
     private album;
     public currentUser: User;
+    public photoSingleName;
 
     public backToAlbum() {
         this.router.navigate(['../']);
@@ -31,6 +32,7 @@ export class PhotoSingleComponent implements OnInit {
     ngOnInit() {
         let currentAlbumName = this.route.snapshot.params['name'];
         let currentPhotoName = this.route.snapshot.params['id'];
+        this.photoSingleName = this.route.snapshot.params['id'];
         this.store.select('albums').subscribe(
             (album: Album) => {
                 this.album = album;
@@ -47,6 +49,7 @@ export class PhotoSingleComponent implements OnInit {
                 this.currentUser = user;
             }
         );
+        console.log(this.currentUser);
 
     }
 

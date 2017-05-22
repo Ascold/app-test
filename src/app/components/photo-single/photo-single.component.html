@@ -4,7 +4,7 @@
             <i class="fa fa-angle-left fa-2x" aria-hidden="true"></i>
         </div>
         <div>
-            <p>{{this.route.snapshot.params['id']}}</p>
+            <p>{{photoSingleName}}</p>
         </div>
     </div>
     <div class="single-photo-container">
@@ -14,7 +14,7 @@
         <div class="single-photo-description">
             <div class="clearfix">
                 <div>File name</div>
-                <div>{{this.route.snapshot.params['id']}}</div>
+                <div>{{photoSingleName}}</div>
             </div>
             <div class="clearfix">
                 <div>Object name</div>
@@ -22,10 +22,7 @@
             </div>
             <div class="clearfix">
                 <div>Caption</div>
-                <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis libero veritatis voluptatem!
-                    Dignissimos dolorum iure nulla quaerat voluptate? Accusamus dolore dolorum eos laboriosam quam
-                    recusandae unde? Blanditiis ipsa neque qui.
-                </div>
+                <div>{{currentUser.bio}}</div>
             </div>
         </div>
     </div>
