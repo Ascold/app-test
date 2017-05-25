@@ -4,7 +4,7 @@ import {Store} from '@ngrx/store';
 
 import {AppStore} from '../../app.store';
 import {Album} from '../../models/album.list';
-import {User} from "../../models/user";
+import {User} from '../../models/user';
 
 @Component({
     selector: 'app-photo-single',
@@ -37,12 +37,12 @@ export class PhotoSingleComponent implements OnInit {
             (album: Album) => {
                 this.album = album;
                 this.currentAlbum = this.album.find(Album => {
-                    return Album.albumTitle == currentAlbumName
+                    return Album.albumTitle === currentAlbumName;
                 });
             }
         );
         this.currentPhoto = this.currentAlbum.albumPhotos.find(temp => {
-            return temp.standard_resolution.match(RegExp(currentPhotoName))
+            return temp.standard_resolution.match(RegExp(currentPhotoName));
         });
         this.store.select('user').subscribe(
             (user: User) => {
